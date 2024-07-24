@@ -1,0 +1,166 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 580px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+.container {
+  padding: 0 15px; 
+  border-radius:45px;
+  background-color: #ffffff; 
+  overflow: hidden; 
+}
+
+.nav {
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header {
+  padding: 20px;
+  background-color: gray;
+  position: relative;
+}
+
+.header i {
+  position: absolute;
+  top: 50%;
+  padding: 20px;
+  transform: translateY(-50%);
+}
+.header1 i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 18px;
+  width: 100%;
+  height: 50px;
+  padding: 10px 40px 10px 50px;
+  font-size: 16px;
+}
+
+input:hover {
+  background-color: #f0f0f0;
+}
+
+.cart {
+  background-color: white;
+  margin-top: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.items {
+  color: gray;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.itemprice {
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  text-align: right;
+  position: relative;
+  top: -40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 15px;
+}
+
+.cartitems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foot {
+  background-color: gray;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: auto;
+  max-width: 580px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.footer-icon {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; /* Allows icons to share space evenly */
+}
+
+.footer-icon i {
+  font-size: 24px; /* Icon size */
+  margin-bottom: 5px; /* Space between icon and text */
+}
+
+.footer-icon span {
+  font-size: 12px; /* Text size */
+  display: block;
+}
+@media (max-width: 580px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .foot {
+    width: calc(100% - 10px); 
+    max-width: 580px; 
+    margin: 0 auto; 
+   
+  }
+
+  .footer-icon {
+    flex: none; 
+  }
+
+  .footer-icon i {
+    font-size: 28px; 
+  }
+
+  .footer-icon span {
+    font-size: 14px; 
+  }
+}
